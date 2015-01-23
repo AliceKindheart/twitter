@@ -7,7 +7,11 @@ app.use(morgan('dev'));
 // :method :url :status :response-time ms - :res[content-length]
 
 app.get('/', function (req, res) {
-  res.send('Welcome to the page!')
+  res.send('Welcome to the edited page!')
+})
+
+app.get('/tweets', function (req, res) {
+  res.send('Page does not exist.')
 })
 
 var server = app.listen(3000, function () {
